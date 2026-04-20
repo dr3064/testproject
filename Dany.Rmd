@@ -1,4 +1,16 @@
-# Loading Citibike Data 
-library(readr)
+# Loading Citibike Data
+
+```{r, include = FALSE}
+library(tidyverse)
 df <- read_csv("data/JC-202603-citibike-tripdata.csv")
-head(df)  
+```
+Simple bar chart shows how many rides were from member vs casual users 
+
+```{r}
+library(tidyverse)
+ggplot(df, aes(member_casual))+ 
+  geom_bar()
+```
+
+
+
